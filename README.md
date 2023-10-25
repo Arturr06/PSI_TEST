@@ -2,7 +2,7 @@
 
 ## Informação do aluno
 
-    Nome: ...
+    Nome: Artur
 
 Teste termina às 09:40 (Turno 1) / 13:25 (Turno 2).
 
@@ -17,7 +17,8 @@ Não desformates o documento.
 
 P1 - Resposta
 
-    ...
+    É impresso \n®\n.
+    Justificação: Visto que é string verbatim e interpolada os \n não são impressos da forma de nova linha e sim como texto e é impresso o simbolo ®. 
 
 ### 2. Considera o seguinte código
 
@@ -30,16 +31,45 @@ P1 - Resposta
 
 P2 - Resposta
 
-    ...
+    É necessario colocar um f a frente do valor que se encontra dentro da variavel float f.
+    Foi necessario adicionar um f ao valor da variavel float f para que a conta seja possivel de fazer, visto que é impossivel utilizar um float sem que o valor possua f ou F no final do mesmo.
 
 ### 3. Escreve um programa que solicite uma string ao utilizador, e seguidamente a mostre no ecrã de forma invertida
 
 P3 - Resposta
 
-    ...
+        static void Main(string[] args)
+        {
+            string StringLida = Console.ReadLine();
+
+            string StringRev = StringReversa(StringLida);
+
+            Console.WriteLine(StringRev);
+
+        }
+
+        static string StringReversa(string input)
+    {
+        char[] charArray = input.ToCharArray();
+        
+        Array.Reverse(charArray);
+        
+        return new string(charArray);
+    }
+    }
+
+
 
 ### 4. Quais são os comandos Git para configurares, de uma forma global, o teu **nome** e **email** para realização de *commits*? E se essa configuração for apenas para um repositório?
 
 P4 - Resposta
 
-    ...
+    Global:
+    
+    git config --global user.name "Seu Nome"
+    git config --global user.email "seuemail@example.com"
+
+    Local:
+
+    git config user.name "Seu Nome"
+    git config user.email "seuemail@example.com"
